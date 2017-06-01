@@ -1,3 +1,16 @@
 <view class="map_container">
      <map></map> 
+     <view class="currentLoc">
+        <image src="../../images/curloc.jpg"></image>
+     </view>
+     <view class="scanToOpen">
+         <image src="../../images/scanToOpen.jpg"></image>
+         <text>扫码开锁</text>
+     </view>
+     <view class="redPacket">
+        <image src="../../images/redPacket.png"></image>
+     </view>
+      <view class="wallet">
+        <image src="../../images/wallet.jpg"></image>
+     </view>
 </view>
