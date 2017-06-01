@@ -1,9 +1,9 @@
 <view class="map_container">
      <map></map> 
-     <view class="currentLoc">
+     <view class="currentLoc" bindtap="getLocation">
         <image src="../../images/curloc.jpg"></image>
      </view>
-     <view class="scanToOpen">
+     <view class="scanToOpen" bindtap="scanCode">
          <image src="../../images/scanToOpen.jpg"></image>
          <text>扫码开锁</text>
      </view>

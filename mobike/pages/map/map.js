@@ -1,5 +1,6 @@
 Page({
   data: {
+    scanResult:"",
     markers: [{
       // iconPath: "/resources/others.png",
       id: 0,
@@ -31,6 +32,34 @@ Page({
       },
       clickable: true
     }]
+  },
+  getLoaction: function(){
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function(res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        console.log(latitude+":"+longitude )
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })
+  },
+  scanCode: function(){
+      var that = this;
+      wx.scanCode({
+        success: function(res){
+          that.setData({
+            scanResult:res.scanResult
+          })
+        },
+        fail:function(res){
+
+        }
+      })
   },
   regionchange(e) {
     console.log(e.type)

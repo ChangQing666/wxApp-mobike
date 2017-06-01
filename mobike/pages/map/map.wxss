@@ -48,7 +48,7 @@ map{
 }
 .redPacket{
   position:absolute;
-  bottom:120rpx;
+  bottom:124rpx;
   right:19rpx;
   width:84rpx;
   height:84rpx;
@@ -57,12 +57,11 @@ map{
   box-shadow: 0 0rpx 15rpx rgba(0,0,0,.2);
   overflow:hidden;
 }
-.redPacke image{
-  width:50rpx;
-  position:absolute;
-  top:30rpx;
-  left:50%;
-  margin-left:-25rpx;
+.redPacket image{
+  width:56rpx;
+  height:64rpx;
+  margin-top:24rpx;
+  margin-left:14rpx;
 }
 .scanToOpen{
   width:250rpx;
