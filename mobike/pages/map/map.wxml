@@ -1,6 +1,6 @@
 <view class="map_container">
-     <map></map> 
-     <view class="currentLoc" bindtap="getLocation">
+     <map show-location controls="{{controls}}" bindcontroltap="controltap"></map> 
+     <!--<view class="currentLoc" bindtap="getLocation">
         <image src="../../images/curloc.jpg"></image>
      </view>
      <view class="scanToOpen" bindtap="scanCode">
@@ -12,5 +12,5 @@
      </view>
       <view class="wallet">
         <image src="../../images/wallet.jpg"></image>
-     </view>
+     </view>-->
 </view>

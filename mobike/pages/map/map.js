@@ -1,8 +1,17 @@
+var position1= {
+  left: 19,
+    top: 550,
+      width: 60,
+        height: 60
+}
 Page({
   data: {
+    windowWidth:0,
+    windowHeight:0,
     scanResult:"",
+   
     markers: [{
-      // iconPath: "/resources/others.png",
+      iconPath: "../../images/curLoc.png",
       id: 0,
       latitude: 23.099994,
       longitude: 113.324520,
@@ -21,18 +30,64 @@ Page({
       width: 2,
       dottedLine: true
     }],
-    controls: [{
-      id: 1,
-      // iconPath: '/resources/location.png',
-      position: {
-        left: 0,
-        top: 300 - 50,
-        width: 50,
-        height: 50
+    controls: [
+      {
+        id: 1,
+        iconPath: '../../images/icon_location.png',
+        position: position1,
+        clickable: true
       },
-      clickable: true
-    }]
+      {
+        id: 2,
+        iconPath: '../../images/scantoopen.png',
+        position: {
+          left: 150,
+          top: 550,
+          width: 150,
+          height: 55
+        },
+        clickable: true
+      },
+      {
+        id: 3,
+        iconPath: '../../images/icon_redpacket.png',
+        position: {
+          left: 330,
+          top: 450,
+          width: 60,
+          height: 60
+        },
+        clickable: true
+      },
+      {
+        id: 4,
+        iconPath: '../../images/icon_wallet.png',
+        position: {
+          left:330,
+          top: 550,
+          width:60,
+          height: 60
+        },
+        clickable: true
+      },
+     
+    ]
   },
+  onLoad(){
+    var that =this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        that.setData({
+          windowWidth: res.windowWidth,
+          windowHeight: res.windowHeight,
+        });
+      }
+    })
+    console.log(this.data.windowWidth + ":" + this.data.windowHeight)
+  },
+  
   getLoaction: function(){
     wx.getLocation({
       type: 'gcj02', //返回可以用于wx.openLocation的经纬度
@@ -69,5 +124,11 @@ Page({
   },
   controltap(e) {
     console.log(e.controlId)
+    if(e.controlId==1){
+      this.getLoaction();
+    }
+    if(e.controlId==2){
+     this.scanCode();
+    }
   }
 })
