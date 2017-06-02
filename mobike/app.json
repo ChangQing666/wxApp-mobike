@@ -1,6 +1,10 @@
 {
   "pages":[
+    "pages/redPacket/redPacket",
     "pages/map/map",
+    "pages/wallet/wallet",
+   
+   
     "pages/index/index",
     "pages/logs/logs"
   ],

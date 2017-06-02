@@ -1,0 +1,12 @@
+<!--pages/redPacket/redPacket.wxml-->
+
+<view class="redAmount">
+ <text>{{redAmount}}</text><text>元</text>
+</view>
+<view class="intro">
+已存入红包余额
+</view>
+<view class="intro">
+可以使用摩拜单车App提现
+</view>
+<image src="../../images/redPacket.jpg"></image>

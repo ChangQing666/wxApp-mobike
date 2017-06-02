@@ -1,0 +1,18 @@
+/* pages/redPacket/redPacket.wxss */
+page{
+  background:#f1f5f8;
+}
+.intro{
+  color:#999;
+  font-size:30rpx;
+  text-align:center;
+  line-height:50rpx;
+}
+image{
+  position:absolute;
+  bottom:100rpx;
+  left:50%;
+  margin-left:-300rpx;
+  width:600rpx;
+  height:341rpx;
+}

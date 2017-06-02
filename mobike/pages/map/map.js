@@ -186,5 +186,23 @@ Page({
     if(e.controlId==2){
      this.scanCode();
     }
+    if (e.controlId == 3) {
+      this.toRedPacket();
+    }
+    if(e.controlId==4){
+      this.toWallet();
+    }
+  },
+  toRedPacket: function () {
+    console.log("跳转")
+    wx.navigateTo({
+      url: '/pages/redPacket/redPacket'
+    })
+  },
+  toWallet:function(){
+    console.log("跳转")
+    wx.navigateTo({
+      url: '/pages/wallet/wallet'
+    })
   }
 })

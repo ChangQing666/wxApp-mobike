@@ -1,0 +1,23 @@
+<!--pages/wallet/wallet.wxml-->
+<!--车费余额-->
+<view class="balance_box">
+  <image src="../../images/icon_yellowBike.jpg"></image>
+  <view class="content">
+    <view class="balance">￥{{balance}}</view>
+    <view class="cfye">车费余额</view>
+    <view class="freeEndDate">您累计可免费骑行至{{freeEndDate}}</view>
+  </view>
+</view>
+<view class="czje">充值金额</view>
+<view class="amountList">
+   <button class="active" >￥100</button>
+   <button>￥50</button>
+   <button>￥20</button>
+   <button>￥10</button>
+</view>
+<view class="intro">
+<view class="intro_text">点击去充值，即表示已阅读并同意 <text class="czxy">充值协议</text></view>
+<view class="intro_text">摩拜不会以任何形式要求您输入银行账户和密码</view>
+</view>
+<button class="btn_topay active" bindtap="toPay">去充值</button>
+<view class="yj">押金299元 <text class="rhtyj">如何退押金？</text></view>
