@@ -1,16 +1,3 @@
 <view class="map_container">
-     <map show-location controls="{{controls}}" bindcontroltap="controltap"></map> 
-     <!--<view class="currentLoc" bindtap="getLocation">
-        <image src="../../images/curloc.jpg"></image>
-     </view>
-     <view class="scanToOpen" bindtap="scanCode">
-         <image src="../../images/scanToOpen.jpg"></image>
-         <text>扫码开锁</text>
-     </view>
-     <view class="redPacket">
-        <image src="../../images/redPacket.png"></image>
-     </view>
-      <view class="wallet">
-        <image src="../../images/wallet.jpg"></image>
-     </view>-->
+     <map id="myMap"  show-location longitude="{{longitude}}" latitude="{{latitude}}" controls="{{controls}}"   bindcontroltap="controltap"></map> 
 </view>
