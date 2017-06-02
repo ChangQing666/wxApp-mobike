@@ -1,9 +1,6 @@
-var position1= {
-  left: 19,
-    top: 550,
-      width: 60,
-        height: 60
-}
+var controls ;
+var position1 ,position2,position3,position4;
+var W=0;var H=0;
 Page({
   data: {
     windowWidth:0,
@@ -30,48 +27,7 @@ Page({
       width: 2,
       dottedLine: true
     }],
-    controls: [
-      {
-        id: 1,
-        iconPath: '../../images/icon_location.png',
-        position: position1,
-        clickable: true
-      },
-      {
-        id: 2,
-        iconPath: '../../images/scantoopen.png',
-        position: {
-          left: 150,
-          top: 550,
-          width: 150,
-          height: 55
-        },
-        clickable: true
-      },
-      {
-        id: 3,
-        iconPath: '../../images/icon_redpacket.png',
-        position: {
-          left: 330,
-          top: 450,
-          width: 60,
-          height: 60
-        },
-        clickable: true
-      },
-      {
-        id: 4,
-        iconPath: '../../images/icon_wallet.png',
-        position: {
-          left:330,
-          top: 550,
-          width:60,
-          height: 60
-        },
-        clickable: true
-      },
-     
-    ]
+    controls:controls,
   },
   onLoad(){
     var that =this;
@@ -79,10 +35,65 @@ Page({
       success: function (res) {
         console.log(res.windowWidth)
         console.log(res.windowHeight)
+        W = res.windowWidth;
+        H = res.windowHeight;
+        // 根据屏幕宽高动态设置control 位置
+        position1 = {
+         left:W*.05,
+         top:H-85,
+         width:60,
+         height:60
+        }
+        position2 = {
+          left: W*.5-75,
+          top: H-85,
+          width: 150,
+          height: 55
+        }
+        position3 = {
+          left: W*.95-60,
+          top: H-160,
+          width: 60,
+          height: 60
+        }
+        position4 = {
+          left: W * .95 - 60,
+          top: H-85,
+          width: 60,
+          height: 60
+        }
+        controls = [
+          {
+            id: 1,
+            iconPath: '../../images/icon_location.png',
+            position:position1,
+            clickable: true
+          },
+          {
+            id: 2,
+            iconPath: '../../images/scantoopen.png',
+            position: position2,
+            clickable: true
+          },
+          {
+            id: 3,
+            iconPath: '../../images/icon_redpacket.png',
+            position: position3,
+            clickable: true
+          },
+          {
+            id: 4,
+            iconPath: '../../images/icon_wallet.png',
+            position: position4,
+            clickable: true
+          },
+
+        ]
         that.setData({
-          windowWidth: res.windowWidth,
-          windowHeight: res.windowHeight,
+            controls:controls
         });
+
+
       }
     })
     console.log(this.data.windowWidth + ":" + this.data.windowHeight)
