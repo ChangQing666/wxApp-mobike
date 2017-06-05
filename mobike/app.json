@@ -2,9 +2,7 @@
   "pages":[
     "pages/map/map",
     "pages/redPacket/redPacket",
-    "pages/wallet/wallet",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/wallet/wallet"   
   ],
   "window":{
     "backgroundTextStyle":"light",
