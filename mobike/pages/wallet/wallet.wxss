@@ -46,7 +46,7 @@ button{
   border:1rpx solid  #3c3;
   background:#fff;
 }
-button.active{
+button.selected{
   border:none;
   background:#3c3;
   color:#fff;

@@ -1,6 +1,22 @@
 /* pages/redPacket/redPacket.wxss */
 page{
+  position:relative;
+  height:100%;
+  width:100%;
   background:#f1f5f8;
+}
+.redAmount{
+  text-align:center;
+  color:#f05b48;
+  padding-top:200rpx;
+  margin-bottom:20rpx;
+}
+.redAmount .amount{
+  font-size:60rpx;
+  font-weight:bold;
+}
+.redAmount .unit{
+  font-size:28rpx;
 }
 .intro{
   color:#999;
@@ -13,6 +29,7 @@ image{
   bottom:100rpx;
   left:50%;
   margin-left:-300rpx;
+  display:block;
   width:600rpx;
   height:341rpx;
 }

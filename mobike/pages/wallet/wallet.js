@@ -7,6 +7,10 @@ Page({
   data: {
     balance:"3.50",
     freeEndDate:"2017/06/08",
+    amountList:[
+      100,50,20,10
+    ],
+    curSelected:'0',
   },
 
   /**
@@ -63,6 +67,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  selectAmount:function(e){
+    var dataId = e.target.dataset.id;
+    console.log(dataId)
+    this.setData({
+      curSelected:dataId
+    })
   },
   toPay:function(){
     console.log("充值")

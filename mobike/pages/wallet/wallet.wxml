@@ -9,15 +9,12 @@
   </view>
 </view>
 <view class="czje">充值金额</view>
-<view class="amountList">
-   <button class="active" >￥100</button>
-   <button>￥50</button>
-   <button>￥20</button>
-   <button>￥10</button>
+<view class="amountList" bindtap="selectAmount">
+   <button  wx:for="{{amountList}}"  data-id="{{index}}" class="{{curSelected ==index?'selected':''}}">￥{{item}}</button>
 </view>
 <view class="intro">
 <view class="intro_text">点击去充值，即表示已阅读并同意 <text class="czxy">充值协议</text></view>
 <view class="intro_text">摩拜不会以任何形式要求您输入银行账户和密码</view>
 </view>
-<button class="btn_topay active" bindtap="toPay">去充值</button>
+<button class="btn_topay selected" bindtap="toPay">去充值</button>
 <view class="yj">押金299元 <text class="rhtyj">如何退押金？</text></view>
