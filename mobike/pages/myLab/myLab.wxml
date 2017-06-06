@@ -1,0 +1,41 @@
+<!--pages/myLab/myLab.wxml-->
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+<template is="msgItem" data="{{...item}}"/>
+
+<!--筛选弹窗-->
+<view class="mask">
+  <view class="modal filerModal">
+    <view class="tabsBox" bindtap="selectTab">
+      <view class="tab  {{curTabIdx==index?'active':''}}"  wx:for="{{tabList}}" data-id="{{index}}" >{{item}}</view>
+    </view>
+    <view class="tabsContentBox">
+      <view class="content {{curTabIdx==0?'active':''}}" data-id="0">
+          <view class="tabsTitles" bindtap="selectTabsTitle">
+            <view class="item {{curTabsTitIdx==index?'active':''}}" wx:for="{{tabsTitles}}" data-id="{{index}}" >{{item}}</view>
+            <!--<view class="item active">美食</view>
+            <view class="item">快餐</view>
+            <view class="item">小吃</view>-->
+          </view>
+           <view class="tabsContents">
+            <view class="item">
+              美食1
+            </view>
+            <view class="item">美食2</view>
+            <view class="item">美食3</view>
+            <view class="item">美食4</view>
+          </view>
+
+
+
+      </view>
+      <view class="content {{curTabIdx==1?'active':''}}" data-id="1">内容2</view>
+      <view class="content {{curTabIdx==2?'active':''}}" data-id="2">内容3</view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,66 @@
+/* pages/myLab/myLab.wxss */
+.mask{
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,.2);
+}
+.modal{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:50%;
+  background:#fff;
+}
+.tabsBox{
+  border-bottom:1px solid #eee;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tab{
+  line-height:70rpx;
+}
+.tab.active{
+  color:#f90;
+}
+.tabsContentBox .content{
+  display:none;
+  font-size:28rpx;
+  line-height:80rpx;
+  padding:30rpx 0;
+}
+.tabsContentBox  .content.active{
+  display:block;
+  color:#39f;
+}
+.tabsContentBox .content .item{
+  
+}
+.tabsTitles{
+  float:left;
+  background:#eee;
+  width:40%;
+  padding:20rpx 0;
+}
+.tabsTitles .item{
+  box-sizing:border-box;
+  padding:0 20rpx;
+}
+.tabsTitles .item.active{
+  background:#fff;
+}
+.tabsContents{
+  float:left;
+  width:60%;
+  padding-left:20rpx;
+  box-sizing: border-box;
+}
+.tabsContents .item{
+  color:#333;
+  box-sizing:border-box;
+  border-bottom:1rpx solid #e5e5e5;
+}

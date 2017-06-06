@@ -11,7 +11,7 @@ Page({
     latitude: 39.915119,
     // markers:markers,
     markers:[{
-      // iconPath: "../../images/curLoc.png",
+      iconPath: "../../images/bike@red.png",
       id:0,
       longitude: 116.403963,
       latitude: 39.915119,
