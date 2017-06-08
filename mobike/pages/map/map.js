@@ -36,7 +36,6 @@ Page({
     var that =this;
     // 使用 wx.createMapContext 获取 map 上下文
     that.mapCtx = wx.createMapContext('myMap');
-   
     // 获取屏幕宽高
     wx.getSystemInfo({
       success: function (res) {
@@ -128,7 +127,7 @@ Page({
         })
       },
       fail:function(){
-        console.log("获取位置失败")
+        console.log("获取位置失败");
       }
     })
   },

@@ -12,7 +12,34 @@ Page({
     ],
     curSelected:'0',
   },
-
+  selectAmount: function (e) {
+    var dataId = e.target.dataset.id;
+    console.log(dataId)
+    this.setData({
+      curSelected: dataId
+    })
+  },
+  toPay: function () {
+    console.log("充值")
+    wx.requestPayment({
+      'timeStamp': '',
+      'nonceStr': '',
+      'package': '',
+      'signType': 'MD5',
+      'paySign': '',
+      'success': function (res) {
+        console.log("调起支付成功")
+      },
+      'fail': function (res) {
+        console.log("调起支付失败")
+      }
+    })
+  },
+  toMyLab:function(){
+    wx.navigateTo({
+      url: '/pages/myLab/myLab'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -68,27 +95,5 @@ Page({
   onShareAppMessage: function () {
   
   },
-  selectAmount:function(e){
-    var dataId = e.target.dataset.id;
-    console.log(dataId)
-    this.setData({
-      curSelected:dataId
-    })
-  },
-  toPay:function(){
-    console.log("充值")
-    wx.requestPayment({
-      'timeStamp': '',
-      'nonceStr': '',
-      'package': '',
-      'signType': 'MD5',
-      'paySign': '',
-      'success': function (res) {
-        console.log("调起支付成功")
-      },
-      'fail': function (res) {
-        console.log("调起支付失败")
-      }
-    })
-  }
+  
 })

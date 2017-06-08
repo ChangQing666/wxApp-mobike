@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/myLab/myLab",
     "pages/map/map",
     "pages/redPacket/redPacket",
-    "pages/wallet/wallet"
+    "pages/wallet/wallet",
+    "pages/myLab/myLab"
   ],
   "window":{
     "backgroundTextStyle":"light",

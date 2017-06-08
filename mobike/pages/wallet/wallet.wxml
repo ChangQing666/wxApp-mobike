@@ -17,4 +17,4 @@
 <view class="intro_text">摩拜不会以任何形式要求您输入银行账户和密码</view>
 </view>
 <button class="btn_topay selected" bindtap="toPay">去充值</button>
-<view class="yj">押金299元 <text class="rhtyj">如何退押金？</text></view>
+<view class="yj">押金299元 <text class="rhtyj" bindtap="toMyLab">如何退押金？</text></view>

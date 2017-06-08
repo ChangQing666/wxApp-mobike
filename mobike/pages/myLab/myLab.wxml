@@ -16,10 +16,7 @@
     <view class="tabsContentBox">
       <view class="content {{curTabIdx==0?'active':''}}" data-id="0">
           <view class="tabsTitles" bindtap="selectTabsTitle">
-            <view class="item {{curTabsTitIdx==index?'active':''}}" wx:for="{{tabsTitles}}" data-id="{{index}}" >{{item}}</view>
-            <!--<view class="item active">美食</view>
-            <view class="item">快餐</view>
-            <view class="item">小吃</view>-->
+            <view  wx:for="{{tabsTitles}}" data-id="{{index}}" class="item {{curTabsTitIdx==index?'active':''}}">{{item}}</view>
           </view>
            <view class="tabsContents">
             <view class="item">
@@ -29,9 +26,6 @@
             <view class="item">美食3</view>
             <view class="item">美食4</view>
           </view>
-
-
-
       </view>
       <view class="content {{curTabIdx==1?'active':''}}" data-id="1">内容2</view>
       <view class="content {{curTabIdx==2?'active':''}}" data-id="2">内容3</view>
